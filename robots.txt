@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://djdordje.com/sitemap.xml
