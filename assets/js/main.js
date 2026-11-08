@@ -61,6 +61,7 @@
       body.classList.remove('choosing');
       window.scrollTo(0, 0);
       restartLetters();
+      setSound(true); // the click on a side counts as permission to play sound
     });
   });
 
@@ -70,13 +71,36 @@
     });
   }
 
-  /* ---------- Hero video ---------- */
+  /* ---------- Hero video + sound ---------- */
   var hv = document.querySelector('.hero-vid');
+  var sndBtn = document.getElementById('snd-btn');
+  var fadeT = null;
   if (hv) {
     hv.muted = true;
     if (reduce) { hv.removeAttribute('autoplay'); hv.pause(); }
     else { var p = hv.play(); if (p && p.catch) p.catch(function () {}); }
   }
+  function setSound(on) {
+    if (!hv) return;
+    clearInterval(fadeT);
+    if (on) {
+      hv.muted = false; hv.volume = 0;
+      var pp = hv.play(); if (pp && pp.catch) pp.catch(function () {});
+      fadeT = setInterval(function () {
+        hv.volume = Math.min(0.8, hv.volume + 0.05);
+        if (hv.volume >= 0.8) clearInterval(fadeT);
+      }, 100);
+      var other = document.querySelector('#sound video'); if (other) other.pause();
+    } else {
+      hv.muted = true;
+    }
+    body.classList.toggle('sound-on', on);
+    if (sndBtn) sndBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
+  }
+  if (sndBtn) sndBtn.addEventListener('click', function () { setSound(!body.classList.contains('sound-on')); });
+  // the full video with controls mutes the hero while it plays
+  var full = document.querySelector('#sound video');
+  if (full) full.addEventListener('play', function () { if (body.classList.contains('sound-on')) setSound(false); });
 
   /* ---------- BPM marquee: speed follows scroll ---------- */
   var mq = document.querySelector('.mq-track');

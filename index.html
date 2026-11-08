@@ -28,6 +28,7 @@
 <div class="chooser" role="dialog" aria-modal="true" aria-labelledby="chooser-title">
   <div class="chooser-top mono"><span>Dordje — DJ / Vocal — Athens</span><span style="color:#FF3B30">● Выбери сторону</span></div>
   <h1 id="chooser-title" class="disp">Что празднуем?</h1>
+  <p class="chooser-hint mono">● Выбери сторону — и сет начнётся со звуком</p>
   <div class="chooser-grid">
     <button type="button" class="choice" data-choose="a">
       <img src="assets/img/venue-singing.jpg" alt="">
@@ -75,7 +76,7 @@
 <section class="np mono" aria-label="Коротко">
   <div class="wrap np-in">
     <p class="np-title"><span class="eq" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></span><span class="only-a">Now playing: твоя свадьба (extended mix)</span><span class="only-b">Now playing: твоя вечеринка (club mix)</span></p>
-    <p class="np-stats">с 2010 · 250+ ивентов · 89 свадеб</p>
+    <div class="np-right"><p class="np-stats">с 2010 · 250+ ивентов · 89 свадеб</p><button type="button" class="snd" id="snd-btn" aria-pressed="false"><span class="snd-off">▶ Включить звук</span><span class="snd-on">■ Выключить звук</span></button></div>
   </div>
 </section>
 
@@ -112,7 +113,7 @@
       <div class="stack" style="gap:22px">
         <p class="label"><span class="count" data-n="02">02</span> / КТО ЗА ПУЛЬТОМ</p>
         <h2 class="h2 disp reveal">Диджей, который поёт</h2>
-        <p class="lead">Я Дордже. Играю с 2010-го. Музыкальное образование, живой вокал и ни одного одинакового сета: я смотрю на людей, а не в заранее сохранённый плейлист.</p>
+        <p class="lead">Меня зовут Игорь, сцена — DJ Dordje. Я оперный певец с высшим музыкальным образованием и диджей. Играю с 2010-го — и ни одного одинакового сета: я смотрю на людей, а не в заранее сохранённый плейлист.</p>
         <p class="lead">Есть ведущий — работаем в связке. Нет ведущего — веду вечер сам, музыкой и песнями. Всё оборудование своё, приезжаю за 2 часа.</p>
         <div class="stats">
           <div><b>250+</b><span>ИВЕНТОВ</span></div>
@@ -143,7 +144,7 @@
         <p class="label"><span class="count" data-n="03">03</span> / ГОЛОС</p>
         <h2 class="h2 disp reveal">Микрофон — тоже мой инструмент</h2>
       </div>
-      <p class="lead"><span class="only-a">Я пою на концертных сценах с пианистами и оркестром. На свадьбе это первый танец вживую, песня для родителей, от которой все тянутся за салфетками, и момент, когда хит звучит не из колонок, а голосом. Соло или с музыкантами — фортепиано, гитара.</span><span class="only-b">Я пою на концертных сценах с пианистами и оркестром. На вечеринке это песня имениннику вживую и момент, когда весь зал поёт со мной. Соло или с музыкантами — фортепиано, гитара.</span></p>
+      <p class="lead"><span class="only-a">Я оперный певец и выступаю на концертных сценах с пианистами и оркестром — в репертуаре Магомаев, Кобзон и современные хиты на разных языках. На свадьбе это первый танец вживую, песня для родителей, от которой все тянутся за салфетками, и момент, когда хит звучит не из колонок, а голосом. Соло или с музыкантами — фортепиано, гитара.</span><span class="only-b">Я оперный певец и выступаю на концертных сценах с пианистами и оркестром — в репертуаре Магомаев, Кобзон и современные хиты на разных языках. На вечеринке это песня имениннику вживую и момент, когда весь зал поёт со мной. Соло или с музыкантами — фортепиано, гитара.</span></p>
     </div>
     <div class="trio">
       <img class="ph" src="assets/img/orchestra.jpg" alt="Выступление с оркестром" loading="lazy">
@@ -257,14 +258,13 @@
       </div>
       <p class="mono muted" style="margin:0">Все оценки — 5 из 5</p>
     </div>
-    <!-- TODO: replace the [bracketed] placeholders with the real review texts -->
     <div class="reviews">
-      <figure class="review"><span class="stars">01 ★★★★★</span><blockquote>[Текст отзыва Вадима]</blockquote><figcaption>Вадим — праздник</figcaption></figure>
-      <figure class="review"><span class="stars">02 ★★★★★</span><blockquote>[Текст отзыва Александра]</blockquote><figcaption>Александр — торжество</figcaption></figure>
-      <figure class="review"><span class="stars">03 ★★★★★</span><blockquote>[Текст отзыва Елены]</blockquote><figcaption>Елена — семейный праздник</figcaption></figure>
-      <figure class="review"><span class="stars">04 ★★★★★</span><blockquote>[Текст отзыва Дианы]</blockquote><figcaption>Диана — выпускной</figcaption></figure>
-      <figure class="review"><span class="stars">05 ★★★★★</span><blockquote>[Текст отзыва Даниила]</blockquote><figcaption>Даниил — праздник</figcaption></figure>
-      <figure class="review"><span class="stars">06 ★★★★★</span><blockquote>[Текст отзыва Валерии]</blockquote><figcaption>Валерия — праздник</figcaption></figure>
+      <figure class="review"><span class="stars">01 ★★★★★</span><blockquote>Игорь, могу сказать точно, только одно, круче тебя и твоей команды нет никого)) А если серьезно, это было МЕГА круто! Вы отличные супер позитивные ребята, настоящие профессионалы своего дела, побольше бы таких талантливых диджеев и ведущих, как вы! Спасибо вам за праздник и отличное настроение) Рекомендую всем и каждому, только вы!</blockquote><figcaption>Вадим — праздник</figcaption></figure>
+      <figure class="review"><span class="stars">02 ★★★★★</span><blockquote>Хотим сказать огромное спасибо Игорю он же Dj Dordje за потрясающий вечер и за отличное настроение! Праздник прошёл на УРА!!! Все выпускники остались безумно довольны! Было невероятно весело и необычно!!! Желаем продолжать в том же духе радовать гостей! Процветания и огромных успехов! Ты молодец!!!</blockquote><figcaption>Диана — выпускной</figcaption></figure>
+      <figure class="review"><span class="stars">03 ★★★★★</span><blockquote>Спасибо Dj Dordje за отлично подобранные треки, под которые танцевали все наши гости. Профессионал своего дела. Отличный вокалист и Dj. Лучший вариант за адекватную цену. Благодарим еще раз за проведенный вечер!!! Все гости довольны!)</blockquote><figcaption>Александр — праздник</figcaption></figure>
+      <figure class="review"><span class="stars">04 ★★★★★</span><blockquote>Это реально круто, когда к вам приезжает такой крутой диджей и играет хорошую музыку, еще и отлично поёт! Нам очень понравился его ответственный подход к работе, приехал заранее в ресторан, все подключил, проверил и встречал нас уже с музыкой))</blockquote><figcaption>Даниил — праздник в ресторане</figcaption></figure>
+      <figure class="review"><span class="stars">05 ★★★★★</span><blockquote>Игорь, благодарим вас за отлично проведённое мероприятие. Вся семья была довольна, мы отлично провели время. С удовольствием ещё раз к вам обратимся за помощью проведения праздников:)</blockquote><figcaption>Елена — семейный праздник</figcaption></figure>
+      <figure class="review"><span class="stars">06 ★★★★★</span><blockquote>Игорь, спасибо тебе за профессионализм, за твою клиентоориентированность, за легкость общения! Ты крутой!!!! Каждый следующий праздник будем обращаться только к тебе!!!</blockquote><figcaption>Валерия — праздник</figcaption></figure>
     </div>
   </div>
 </section>

@@ -94,9 +94,9 @@ a:hover { color: var(--acc); }
 .hero-in { position: relative; width: 100%; padding-bottom: 28px; display: flex; flex-direction: column; gap: 22px; }
 .hero-tag span { background: var(--acc); color: var(--acc-ink); padding: 6px 12px; font-weight: 700; font-size: 14px; text-transform: uppercase; }
 .hero-sub { margin: 0; font-size: clamp(20px, 2.2vw, 26px); max-width: 640px; font-weight: 500; }
-.hero-btns { display: flex; flex-wrap: wrap; gap: 10px; }
+.hero-btns { display: flex; flex-wrap: wrap; gap: 10px; position: relative; z-index: 3; }
 .hero-btns .btn:not(.btn-acc) { color: #F2F2F2; }
-.hero-name { margin: 8px 0 0; font-size: clamp(88px, 20vw, 300px); line-height: .82; letter-spacing: -.02em; white-space: nowrap; }
+.hero-name { pointer-events: none; margin: 8px 0 0; font-size: clamp(88px, 20vw, 300px); line-height: .82; letter-spacing: -.02em; white-space: nowrap; }
 .letter { display: inline-block; }
 .side-a .letter { animation: dd-rise 1.2s cubic-bezier(.2,.8,.2,1) both; }
 .side-b .letter { animation: dd-punch .5s cubic-bezier(.2,1.5,.4,1) both; color: transparent; -webkit-text-stroke: 2px #F2F2F2; }
@@ -110,6 +110,15 @@ a:hover { color: var(--acc); }
 .np p { margin: 0; font-weight: 700; }
 .np-title { font-size: 18px; letter-spacing: .02em; text-transform: uppercase; display: flex; align-items: center; gap: 16px; }
 .np-stats { font-size: 15px; }
+.np-right { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
+.snd { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 14px; text-transform: uppercase; min-height: 44px; padding: 10px 16px; cursor: pointer; border: 2px solid var(--acc-ink); background: var(--acc-ink); color: var(--acc); }
+.snd:hover { filter: brightness(1.15); }
+.snd .snd-on, .sound-on .snd .snd-off { display: none; }
+.sound-on .snd .snd-on { display: inline; }
+.sound-on .snd { background: transparent; color: var(--acc-ink); }
+.eq span { animation-play-state: paused; transform: scaleY(.25); }
+.sound-on .eq span { animation-play-state: running; }
+.chooser-hint { margin: -16px 0 0; padding: 0 28px 24px; color: #FF3B30; font-size: 14px; text-transform: uppercase; letter-spacing: .06em; }
 .eq { display: inline-flex; align-items: flex-end; gap: 3px; height: 20px; }
 .eq span { display: block; width: 4px; height: 20px; background: var(--acc-ink); transform-origin: bottom; animation: dd-eq .8s ease-in-out infinite alternate; }
 .eq span:nth-child(1) { animation-duration: .7s; } .eq span:nth-child(2) { animation-duration: .45s; }
